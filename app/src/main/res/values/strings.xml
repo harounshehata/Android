@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_english">In English</string>
+    <string name="button_german">In German</string>
+    <string name="button_event">Click me</string>
+</resources>
