@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
+
     }
 
     /** Called when the user taps the Send button */
@@ -55,6 +57,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EditText editText = findViewById(R.id.firstEditText);
         editText.setText("Enter a message!");
     }
+
+    public void startNewActivityWithIntent(View view) {
+        Intent startNewActivity = new Intent(MainActivity.this, NewActivity.class);
+        startNewActivity.putExtra("key", "started new Activity through intent"); //Optional parameters
+        MainActivity.this.startActivity(startNewActivity);
+    }
+
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event)
