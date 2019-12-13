@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
-
-
     }
 
     /** Called when the user taps the Send button */
@@ -59,9 +58,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void startNewActivityWithIntent(View view) {
+        EditText name =  findViewById(R.id.secondEditText);
+        EditText address = findViewById(R.id.thirdEditText);
+        EditText postcode = findViewById(R.id.fourthEditText);
+
         Intent startNewActivity = new Intent(MainActivity.this, NewActivity.class);
-        startNewActivity.putExtra("key", "started new Activity through intent"); //Optional parameters
+        Bundle extras = new Bundle();
+        extras.putString("Name", name.getText().toString());
+        extras.putString("Address", address.getText().toString());
+        extras.putString("Postal Code", postcode.getText().toString());
+        startNewActivity.putExtras(extras);
         MainActivity.this.startActivity(startNewActivity);
+    }
+
+    public void openBrowserWithIntent(View view) {
+        String url = "http://www.google.com";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        MainActivity.this.startActivity(i);
     }
 
 

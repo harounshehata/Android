@@ -4,7 +4,9 @@
     <string name="button_english">In English</string>
     <string name="button_german">In German</string>
     <string name="button_event">Click me</string>
-    <string name="button_intent">Start new Activity through intent</string>
+    <string name="button_intent_activity">Send Data to new Activity through intent</string>
+    <string name="button_intent_browser">Start Browser through intent</string>
+    <string name="activity_data"> Name: %1$s\n Address: %2$s\n Postal Code: %3$s\n</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

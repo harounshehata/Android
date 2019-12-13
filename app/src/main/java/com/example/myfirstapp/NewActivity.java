@@ -17,6 +17,6 @@ public class NewActivity extends AppCompatActivity
 
         Intent intent = getIntent();
         TextView textView = findViewById(R.id.intentExtras);
-        textView.setText(intent.getStringExtra("key"));
+        textView.setText(getString(R.string.activity_data,intent.getStringExtra("Name"),intent.getStringExtra("Address"),intent.getStringExtra("Postal Code")));
     }
 }
