@@ -8,4 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
+    <TableLayout
+        android:id="@+id/PictureTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <ImageView android:src="@drawable/picture_1" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+            <ImageView android:src="@drawable/picture_2" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+            <ImageView android:src="@drawable/picture_3" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView android:src="@drawable/picture_4" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+            <ImageView android:src="@drawable/picture_5" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+            <ImageView android:src="@drawable/picture_6" android:layout_width="0dp" android:layout_height="200dp" android:layout_weight="1" android:contentDescription="@string/picture"/>
+        </TableRow>
+
+    </TableLayout>
 </LinearLayout>
